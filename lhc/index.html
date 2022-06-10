@@ -41,8 +41,13 @@
 
         renderer = new THREE.WebGLRenderer( { canvas: threeCanvas } );
 
+        /*
         camera = new THREE.PerspectiveCamera(55,window.innerWidth/window.innerHeight,45,30000);
         camera.position.set(-900,-200,-900);
+        */
+
+        camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 1, 1000 );
+				camera.position.set( 400, 200, 0 );
 
         controls = new OrbitControls( camera, renderer.domElement );
         controls.addEventListener('change', renderer);
@@ -71,6 +76,7 @@
         scene.add( skybox );  
         animate();
       }
+
       function animate() {
         renderer.render(scene,camera);
         requestAnimationFrame(animate);
