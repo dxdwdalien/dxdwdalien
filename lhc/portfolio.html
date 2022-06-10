@@ -1,0 +1,194 @@
+<html>
+    <head> 
+        <title>$leeping_santa</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="portfolio.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <style type="text/css">
+            a{text-decoration: none;}
+        </style>
+    </head>
+    <body>
+    <script src="http://dreamplan7.cafe24.com/canvas2/js/three.js"></script>
+    <script src="http://dreamplan7.cafe24.com/canvas2/js/OrbitControls.js"></script>
+    <div class="haha">
+    <script>
+      let scene, camera, renderer;
+
+      function init() {
+        scene = new THREE.Scene();
+        camera = new THREE.PerspectiveCamera(55,window.innerWidth/window.innerHeight,45,30000);
+        camera.position.set(-900,-200,-900);
+
+        renderer = new THREE.WebGLRenderer({antialias:true});
+        renderer.setSize(window.innerWidth,window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        let controls = new THREE.OrbitControls(camera);
+        controls.addEventListener('change', renderer);
+        controls.minDistance = 500;
+        controls.maxDistance = 1500;
+        
+        let materialArray = [];
+        let texture_ft = new THREE.TextureLoader().load( 'xneg.png');
+        let texture_bk = new THREE.TextureLoader().load( 'xpos.png');
+        let texture_up = new THREE.TextureLoader().load( 'yneg.png');
+        let texture_dn = new THREE.TextureLoader().load( 'ypos.png');
+        let texture_rt = new THREE.TextureLoader().load( 'zneg.png');
+        let texture_lf = new THREE.TextureLoader().load( 'zpos.png');
+          
+        materialArray.push(new THREE.MeshBasicMaterial( { map: texture_ft }));
+        materialArray.push(new THREE.MeshBasicMaterial( { map: texture_bk }));
+        materialArray.push(new THREE.MeshBasicMaterial( { map: texture_up }));
+        materialArray.push(new THREE.MeshBasicMaterial( { map: texture_dn }));
+        materialArray.push(new THREE.MeshBasicMaterial( { map: texture_rt }));
+        materialArray.push(new THREE.MeshBasicMaterial( { map: texture_lf }));
+   
+        for (let i = 0; i < 6; i++)
+           materialArray[i].side = THREE.BackSide;
+        let skyboxGeo = new THREE.BoxGeometry( 10000, 10000, 10000);
+        let skybox = new THREE.Mesh( skyboxGeo, materialArray );
+        scene.add( skybox );  
+        animate();
+      }
+      function animate() {
+        renderer.render(scene,camera);
+        requestAnimationFrame(animate);
+
+      }
+      init();
+    </script></div>
+    <div class="top-box">
+        <div class="top-right">
+            <div class="right-text" id="info"><a href="info.html">Info</a></div>
+            <div class="right-text" id="portfolio"><a1 href="nextpage.html">Portfolio</a1></div>
+            <div class="right-text" id="instagram"><a href="https://www.instagram.com/sleepingsanta2">Instagram</a></div>
+            <div class="right-text" id="music"><a href="https://soundcloud.com/sleepingsanta">Music</a></div>
+        </div> 
+        <nav class="top-left">
+            <a href="index.html">
+                <img class="left-text-white" src="img/white.png">
+                <img class="left-text-red" src="img/red.png"> 
+            </a>
+        </nav>
+        <div class="animate__animated animate__fadeIn" id="left-text"><a href=index.html>$__S</a></div>
+        <nav class="Center-box">
+            <div class="animate__animated animate__fadeIn" id="hello">$leeping_Santa</div>
+        </nav>
+    </div>
+    <main>
+        <section id="item-grid">
+            <div class="item-container">
+                <a href="sample/hugo.png">
+                    <div class="animate__animated animate__fadeIn" id="item">
+                        <img src="sample/hugo.png">
+                        <div class="overlay">
+                            <div class="text">Hugo Lloris Poster</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="item-container">
+                <a href="sample/jan.png">
+                    <div class="animate__animated animate__fadeIn" id="item">
+                    <img src="sample/jan.png">
+                    <div class="overlay">
+                        <div class="text">Jan Vertonghen Poster</div>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="item-container">
+                <a href="sample/long-kane.png">
+                    <div class="animate__animated animate__fadeIn" id="item"> 
+                    <img src="sample/long-kane.png">
+                    <div class="overlay">
+                        <div class="text">Harry Kane Poster</div>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="item-container">
+                <a href="sample/long-sony.jpg">
+                    <div class="animate__animated animate__fadeIn" id="item">
+                    <img src="sample/long-sony.jpg">
+                    <div class="overlay">
+                        <div class="text">Heung-Min Son Poster</div>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="item-container">
+                <a href="sample/musa.png">
+                    <div class="animate__animated animate__fadeIn" id="item">
+                    <img src="sample/musa.png">
+                    <div class="overlay">
+                        <div class="text">Musa Sisoko Poster</div>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="item-container">
+                <a href="sample/toby.png">
+                    <div class="animate__animated animate__fadeIn" id="item">
+                    <img src="sample/toby.png">
+                    <div class="overlay">
+                        <div class="text">Toby Alderweireld Poster</div>
+                    </div>
+                </div>
+                </a>
+            </div>
+
+            <div class="item-container">
+                <a href="sample/dele.png">
+                    <div class="animate__animated animate__fadeIn" id="item">
+                    <img src="sample/dele.png">
+                    <div class="overlay">
+                        <div class="text">Dele Alli Pixel Art</div>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="item-container">
+                <a href="sample/eriksen.png">
+                    <div class="animate__animated animate__fadeIn" id="item">
+                    <img src="sample/eriksen.png">
+                    <div class="overlay">
+                        <div class="text">Christian Eriksen Pixel Art</div>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="item-container">
+                <a href="sample/lloris.png">
+                    <div class="animate__animated animate__fadeIn" id="item">
+                    <img src="sample/lloris.png">
+                    <div class="overlay">
+                        <div class="text">Hugo Lloris Pixel Art</div>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="item-container">
+                <a href="sample/kane.png">
+                    <div class="animate__animated animate__fadeIn" id="item">
+                    <img src="sample/kane.png">
+                    <div class="overlay">
+                        <div class="text">Harry Kane Pixel Art</div>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="item-container">
+                <a href="sample/sony.PNG">
+                    <div class="animate__animated animate__fadeIn" id="item">
+                    <img src="sample/sony.PNG">
+                    <div class="overlay">
+                        <div class="text">Heung-Min Son Pixel Art</div>
+                    </div>
+                </div>
+                </a>
+            </div>
+        </section>
+    </main>
+</body>

@@ -1,0 +1,93 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+  body{
+    background-color: black;
+}
+
+.main-box{
+}
+
+.small-box{
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 90%;
+}
+.center-text{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    line-height: 20px;
+    /* border: red 2px solid; */
+}
+.main-title{
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    justify-content: center;
+    align-content: center;
+    transform: translateX(-50%);
+    color: white;
+    line-height: 18px;
+    /* border: red 2px solid; */
+}
+#name{
+    font-family: 'PT serif', bold;
+    position: relative;
+    font-size: 30px;
+    transition: 0.5s;
+    background-color: none;
+
+    animation-duration: 3s;
+}
+#name:hover{
+    /* font-size: 40px; */
+    /* font-weight: bold; */
+    color: rgb(255, 30, 30);
+    transition: 0.5s;
+}
+#as-know-as{
+    color: rgb(195, 195, 195);
+    font-size: 15px;
+    font-family: 'PT serif', serif;
+}
+.top-right{
+    z-index: 100;
+    right: 20px;
+    top: 35px;
+    position: fixed;
+    color: white;
+    /* border: red 2px solid; */
+}
+.right-text{
+    position: relative;
+    font-size: 20px;
+    font-family: 'PT serif', serif;
+    display: inline;
+    margin: 1vh;
+    /* border: red 2px solid; */
+}
+.right-text:hover{
+    color:rgb(255, 30, 30);
+}
+a:link{
+    color: white;
+}
+a:visited{
+    color: white;
+}
+a:hover{
+    color: rgb(255, 30, 30);
+}
