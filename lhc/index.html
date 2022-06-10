@@ -27,7 +27,7 @@
         camera = new THREE.PerspectiveCamera(55,window.innerWidth/window.innerHeight,45,30000);
         camera.position.set(-900,-200,-900);
 
-        let controls = new THREE.OrbitControls(camera);
+        let controls = new OrbitControls(camera);
         controls.addEventListener('change', renderer);
         controls.minDistance = 500;
         controls.maxDistance = 1500;
