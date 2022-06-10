@@ -3,11 +3,23 @@
   <head>
     <title>$leeping_santa</title>
     <meta charset=UTF-8 />
-    <style type="text/css"> a{text-decoration: none;} </style>
+    <style type="text/css"> 
+      a{text-decoration: none;}
+      #threeCanvas {
+				position: fixed;
+				top: 100px;
+				left: 100px;
+				width: 800px;
+				height: 800px;
+			} 
+    </style>
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   </head>
   <body>
+    <canvas id="threeCanvas">
+    </canvas>
+
     <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
 		<script type="importmap">
 			{
